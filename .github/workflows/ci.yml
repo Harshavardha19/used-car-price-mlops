@@ -41,9 +41,9 @@ jobs:
       - name: Upload validated ML artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: used_car_price_model_missing.pkl
+          name: used_car_price_model.pkl
           path: |
-            used_car_price_model.pkl
+            used_car_price_model_missing.pkl
             metrics.json
             used_car_prices_new_250.csv
           if-no-files-found: error
