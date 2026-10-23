@@ -41,7 +41,7 @@ jobs:
       - name: Upload validated ML artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: used-car-price-ml-artifacts
+          name: used_car_price_model_missing.pkl
           path: |
             used_car_price_model.pkl
             metrics.json
