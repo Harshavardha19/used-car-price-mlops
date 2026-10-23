@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 jobs:
-  test:
+  train-and-test:
     runs-on: ubuntu-latest
 
     steps:
@@ -28,3 +28,9 @@ jobs:
 
       - name: Test car dataset
         run: python -m unittest test_data -v
+
+      - name: Train used car price model
+        run: python train_model.py
+
+      - name: Run automated ML tests
+        run: python -m unittest test_ml_pipeline -v
