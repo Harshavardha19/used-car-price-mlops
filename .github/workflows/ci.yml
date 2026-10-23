@@ -43,7 +43,7 @@ jobs:
         with:
           name: used_car_price_model.pkl
           path: |
-            used_car_price_model_missing.pkl
+            used_car_price_model.pkl
             metrics.json
             used_car_prices_new_250.csv
           if-no-files-found: error
