@@ -37,3 +37,14 @@ jobs:
 
       - name: Run automated ML tests
         run: python -m unittest test_ml_pipeline -v
+
+      - name: Upload validated ML artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: used-car-price-ml-artifacts
+          path: |
+            used_car_price_model.pkl
+            metrics.json
+            used_car_prices_new_250.csv
+          if-no-files-found: error
+          retention-days: 7
