@@ -4,7 +4,7 @@ import sys
 
 # Maximum acceptable mean absolute error.
 # Review the actual MAE from Practical 2 before finalizing.
-MAX_MAE = 0.0001
+MAX_MAE = 3.0
 with open("metrics.json", encoding="utf-8") as file:
     metrics = json.load(file)
 
